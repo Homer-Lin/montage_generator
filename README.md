@@ -15,6 +15,7 @@
 - tqdm
 - opencv-python
 - pillow
+
 可以直接輸入以下指令安裝
 ```
 pip install opencv-python numpy pillow scipy tqdm
