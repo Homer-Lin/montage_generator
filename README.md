@@ -1,14 +1,14 @@
-#蒙太奇拼貼產生器(Montage Generator)
+# 蒙太奇拼貼產生器(Montage Generator)
 這是一個使用 Python 實作的圖片蒙太奇生成工具。
 它能夠從影片中擷取畫面作為素材，並透過 KD-Tree 演算法快速進行色彩比對，將一張主圖片（Main Photo）用成千上萬張的微小素材圖片拼貼重組而成。
 
-##特色
+## 特色
 - 影片轉素材：內建工具可自動將影片 (.mp4) 依時間間隔截圖，建立素材庫。
 - 高效能比對：使用 scipy.spatial.KDTree 進行色彩空間搜尋，比傳統逐一比對快上許多。
 - 快取機制：首次執行會分析素材顏色並建立 colordb.txt 資料庫，大幅加速後續執行速度。
 - 進度顯示：整合 tqdm 進度條，隨時掌握素材掃描與圖片合成進度。
 
-##環境需求
+## 環境需求
 請確保您的 Python 環境已安裝以下套件：
 - numpy
 - scipy
@@ -20,11 +20,11 @@
 pip install opencv-python numpy pillow scipy tqdm
 ```
 
-##檔案結構
+## 檔案結構
 - main.py: 主程式，使用 KD-Tree 演算法生成蒙太奇拼貼，
 - prepare_photo.py: 影片轉素材，將你準備的影片切分成可以用於生成蒙太奇圖片的素材。
 
-##使用方法
+## 使用方法
 
 ### Step 1. 準備素材
 使用 prepare_photo.py 將你的影片轉換成素材圖片，存放在 ./img 的目錄下。
